@@ -1,0 +1,231 @@
+
+/* =====================================
+   TURUKIART — GALERÍA AVATAR
+   Estilo scrapbook y Pinterest
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fffaf5;
+    color: #51443f;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVEGACIÓN */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #fff;
+    border-bottom: 1px solid #f0e5dc;
+}
+
+.logo {
+    color: #59463f;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #d98b9e;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: #705d55;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: #d98b9e;
+}
+
+/* ENCABEZADO */
+
+.gallery-hero {
+    padding: 65px 8% 50px;
+    text-align: center;
+    background: #f8e9e5;
+}
+
+.gallery-hero .tag {
+    color: #b77b83;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.gallery-hero h1 {
+    color: #55433d;
+    font-family: Georgia, serif;
+    font-size: clamp(35px, 5vw, 55px);
+    margin: 20px 0;
+}
+
+.gallery-hero h1 span {
+    color: #d58b9c;
+    font-style: italic;
+}
+
+.gallery-hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #806c64;
+    line-height: 1.7;
+}
+
+.back-link {
+    color: #a96f7b;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* GALERÍA */
+
+.section {
+    padding: 45px 7%;
+}
+
+.gallery-grid {
+    columns: 3 220px;
+    column-gap: 22px;
+    width: 100%;
+}
+
+.art-item {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 22px;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    break-inside: avoid;
+    box-shadow: 0 4px 15px rgba(100, 75, 65, .10);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.art-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(100, 75, 65, .15);
+}
+
+/* IMÁGENES */
+
+.art-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* INFORMACIÓN */
+
+.art-caption {
+    padding: 14px 16px 16px;
+}
+
+.art-caption h2 {
+    color: #a66f79;
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.art-caption p {
+    color: #75645d;
+    font-size: 13px;
+    margin: 0 0 12px;
+}
+
+/* BOTÓN ME GUSTA */
+
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border: 1px solid #f0d5d8;
+    border-radius: 20px;
+    background: #fff8f7;
+    color: #a66f79;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.like-button:hover {
+    background: #fbe9eb;
+}
+
+.like-button .heart {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.like-button.liked {
+    background: #f9e1e5;
+    color: #c75f78;
+    border-color: #e9b9c4;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    padding: 30px 7%;
+    text-align: center;
+    background: #f8e9e5;
+}
+
+footer p {
+    color: #806c64;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+    .gallery-grid {
+        columns: 2 200px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+    .navbar {
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .gallery-hero {
+        padding: 45px 6%;
+    }
+
+    .section {
+        padding: 30px 5%;
+    }
+
+    .gallery-grid {
+        columns: 2 130px;
+        column-gap: 12px;
+    }
+
+    .art-item {
+        margin-bottom: 14px;
+    }
+}
